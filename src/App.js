@@ -1,25 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+
+import {BrowserRouter as Router,
+    Route,
+  Redirect,
+Switch} from 'react-router-dom';
+
+import MainNavigation from './shared/components/Navigation/MainNavigation/MainNavigation.js'
+import Users from './users/pages/Users.js';
+import Ejercicio2 from './shared/components/Navigation/NavLinks/Ejercicio2';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <MainNavigation />
+      <main>
+      <Switch>
+      <Route path="/Ejercicio2">
+        <Ejercicio2 />
+      </Route>
+
+      <Route path="/places/new" exact>
+        <h1>Places</h1>
+      </Route>
+
+      <Redirect to ="/" />
+
+      </Switch>
+      </main>
+    </Router>
+
   );
+ // document.getElementById("myImg").src = "https://sites.google.com/site/fernvalleybonsai/";
 }
 
 export default App;
