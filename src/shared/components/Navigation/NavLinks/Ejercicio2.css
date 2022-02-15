@@ -1,0 +1,18 @@
+
+
+.butt{
+    size: 100px;
+    background:  aqua;
+    width:10%;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    margin-left: 600px;
+    margin-top: 200px;
+
+}
+
+.butt2{
+    background-color: aquamarine;
+}
