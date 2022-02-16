@@ -24,10 +24,6 @@ function App() {
         <Ejercicio4 />
       </Route>
 
-      <Route path="/places/new" exact>
-        <h1>Places</h1>
-      </Route>
-
       <Redirect to ="/" />
 
       </Switch>
